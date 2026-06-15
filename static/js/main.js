@@ -176,6 +176,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const y = window.scrollY;
       nav.classList.toggle("scrolled", y > 10);
       nav.classList.toggle("hide", y > lastY && y > 180 && !navLinks.classList.contains("open"));
+      document.documentElement.style.setProperty("--nav-h", nav.offsetHeight + "px");
       const h = document.documentElement.scrollHeight - window.innerHeight;
       progress.style.transform = "scaleX(" + (h > 0 ? y / h : 0) + ")";
       if (scrubEls.length) {
@@ -195,22 +196,26 @@ document.addEventListener("DOMContentLoaded", () => {
         requestAnimationFrame(onScroll);
       }
     }, { passive: true });
+    window.addEventListener("resize", () => { document.documentElement.style.setProperty("--nav-h", nav.offsetHeight + "px"); }, { passive: true });
     onScroll();
   });
 
   safe(() => {
+    const nav = document.getElementById("nav");
     const burger = document.getElementById("burger");
     const navLinks = document.getElementById("navLinks");
     if (!burger || !navLinks) return;
-    burger.addEventListener("click", () => {
-      burger.classList.toggle("open");
-      navLinks.classList.toggle("open");
-    });
+    const setOpen = (open) => {
+      burger.classList.toggle("open", open);
+      navLinks.classList.toggle("open", open);
+      if (nav) {
+        nav.classList.toggle("menu-open", open);
+        if (open) nav.classList.remove("hide");
+      }
+    };
+    burger.addEventListener("click", () => setOpen(!navLinks.classList.contains("open")));
     navLinks.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        burger.classList.remove("open");
-        navLinks.classList.remove("open");
-      });
+      link.addEventListener("click", () => setOpen(false));
     });
   });
 
@@ -518,6 +523,25 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   safe(() => {
+    if (reduceMotion) return;
+    document.querySelectorAll(".car-viewport").forEach((vp) => {
+      vp.addEventListener("mousemove", (e) => {
+        const z = e.target.closest(".zoomable");
+        if (!z) return;
+        const img = z.querySelector("img");
+        if (!img) return;
+        const r = z.getBoundingClientRect();
+        const x = ((e.clientX - r.left) / r.width) * 100;
+        const y = ((e.clientY - r.top) / r.height) * 100;
+        img.style.transformOrigin = x.toFixed(2) + "% " + y.toFixed(2) + "%";
+      });
+      vp.addEventListener("mouseleave", () => {
+        vp.querySelectorAll(".zoomable img").forEach((img) => { img.style.transformOrigin = ""; });
+      });
+    });
+  });
+
+  safe(() => {
     const mIn = document.getElementById("mIn");
     const mOut = document.getElementById("mOut");
     const mFps = document.getElementById("mFps");
@@ -640,8 +664,10 @@ document.addEventListener("DOMContentLoaded", () => {
           body: JSON.stringify({
             name: fd.get("name"),
             email: fd.get("email"),
-            subject: topicOption ? topicOption.textContent : topicValue,
+            topic: topicOption ? topicOption.textContent : topicValue,
             message: fd.get("message"),
+            _subject: "People Counter PRO — " + (topicOption ? topicOption.textContent : topicValue),
+            _template: "table",
             _captcha: "false"
           })
         });

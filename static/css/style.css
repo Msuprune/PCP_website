@@ -1777,7 +1777,7 @@ h1, h2, h3, .giant, .kicker, .badge, .step-num, .rm-num, .mini-num, .plan-badge 
 @media (max-width: 900px) {
   .nav-links {
     position: fixed;
-    top: 62px;
+    top: var(--nav-h, 60px);
     left: 0;
     right: 0;
     flex-direction: column;
@@ -1792,6 +1792,13 @@ h1, h2, h3, .giant, .kicker, .badge, .step-num, .rm-num, .mini-num, .plan-badge 
     z-index: 999;
   }
   .nav-links.open { transform: translateY(0); }
+  .nav.menu-open {
+    background: rgba(10, 7, 18, 0.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom-color: var(--border);
+  }
+  .nav.menu-open.hide { transform: none; }
   .nav-links a { padding: 12px 0; font-size: 1.02rem; }
   .nav-links a::after { display: none; }
   .burger { display: flex; }
