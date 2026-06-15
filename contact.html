@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="t_contact">Связаться с нами — People Counter PRO</title>
+<meta name="description" content="People Counter PRO — система видеоаналитики на базе компьютерного зрения: подсчёт людей, тепловые карты, отчёты, приватность.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="static/css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l8.66 5v10L12 22 3.34 17V7L12 2z' fill='%237c3aed'/%3E%3Ccircle cx='12' cy='12' r='3.4' fill='%23c084fc'/%3E%3C/svg%3E">
+<script>try{if(!sessionStorage.getItem("pcp_boot"))document.documentElement.classList.add("booting")}catch(e){}</script>
+</head>
+<body>
+<div class="boot" id="boot" aria-hidden="true">
+  <div class="boot-inner">
+    <span class="boot-logo">PCP<i></i></span>
+    <span class="boot-line" id="bootLine">INIT VISION CORE</span>
+    <div class="boot-bar"><i id="bootBar"></i></div>
+  </div>
+</div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<div class="cursor-aim" id="cursorAim" aria-hidden="true">
+  <span class="aim-tl"></span><span class="aim-tr"></span>
+  <span class="aim-bl"></span><span class="aim-br"></span>
+</div>
+<div class="grain" aria-hidden="true"></div>
+<div class="bg-glow" aria-hidden="true">
+  <div class="aurora a1"></div>
+  <div class="aurora a2"></div>
+</div>
+<header class="nav" id="nav">
+  <a class="logo" href="index.html">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><defs><linearGradient id="lgm" x1="0" y1="0" x2="24" y2="24"><stop stop-color="#8b5cf6"/><stop offset="1" stop-color="#d8b4fe"/></linearGradient></defs><path d="M12 2l8.66 5v10L12 22 3.34 17V7L12 2z" stroke="url(#lgm)" stroke-width="1.6"/><circle cx="12" cy="12" r="3.2" fill="url(#lgm)"/></svg>
+    <span>People&nbsp;Counter&nbsp;<b>PRO</b></span>
+  </a>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html" data-i18n="nav_home">Главная</a>
+    <a href="about.html" data-i18n="nav_about">О программе</a>
+    <a href="pricing.html" data-i18n="nav_pricing">Цены</a>
+    <a href="roadmap.html" data-i18n="nav_roadmap">Обновления</a>
+    <a href="contact.html" class="active" data-i18n="nav_contact">Контакты</a>
+    <div class="lang-switch lang-switch-mobile" role="group" aria-label="Language">
+      <button type="button" data-lang="ru">RU</button>
+      <button type="button" data-lang="en">EN</button>
+      <button type="button" data-lang="kk">KZ</button>
+    </div>
+    <a href="contact.html" class="btn btn-primary btn-sm nav-cta-m" data-i18n="nav_cta">Связаться</a>
+  </nav>
+  <div class="nav-right">
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button type="button" data-lang="ru">RU</button>
+      <button type="button" data-lang="en">EN</button>
+      <button type="button" data-lang="kk">KZ</button>
+    </div>
+    <a href="contact.html" class="btn btn-primary btn-sm nav-cta" data-i18n="nav_cta">Связаться</a>
+    <button class="burger" id="burger" aria-label="Меню" type="button"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main>
+<section class="page-hero">
+  <div class="container">
+    <span class="kicker reveal" data-i18n="ct_k">Контакты</span>
+    <h1 class="reveal d1 rise" data-i18n="ct_t">Напишите нам</h1>
+    <p class="lead reveal d2" data-i18n="ct_s">Вопрос по ценам, нашли ошибку или хотите доработку — пишите. Отвечаем быстро.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container contact-grid">
+    <form class="contact-form reveal from-l" id="contactForm" novalidate>
+      <h2 data-i18n="ct_f_t">Написать сообщение</h2>
+      <label>
+        <span data-i18n="ct_name">Как вас зовут</span>
+        <input type="text" name="name" required maxlength="100" data-i18n-ph="ct_ph_name" placeholder="Имя или как к вам обращаться">
+      </label>
+      <label>
+        <span>Email</span>
+        <input type="email" name="email" required maxlength="120" placeholder="you@example.com">
+      </label>
+      <label>
+        <span data-i18n="ct_topic">Тема</span>
+        <select name="topic" id="topicSelect">
+          <option value="license" data-i18n="ct_o5">Хочу купить лицензию</option>
+          <option value="bug" data-i18n="ct_o1">Нашёл ошибку</option>
+          <option value="pricing" data-i18n="ct_o2">Вопрос по ценам</option>
+          <option value="custom" data-i18n="ct_o3">Нужна доработка</option>
+          <option value="other" data-i18n="ct_o4">Другое</option>
+        </select>
+      </label>
+      <label>
+        <span data-i18n="ct_msg">Сообщение</span>
+        <textarea name="message" rows="6" required maxlength="5000" data-i18n-ph="ct_ph_msg" placeholder="Расскажите, что нужно. Если это ошибка — опишите, что вы делали, какая версия программы и какая камера."></textarea>
+      </label>
+      <button type="submit" class="btn btn-primary btn-block" id="sendBtn" data-i18n="ct_send">Отправить</button>
+      <p class="form-note ok" id="formOk" hidden data-i18n="ct_ok">Спасибо! Сообщение ушло — ответим в ближайшее время.</p>
+      <p class="form-note err" id="formErr" hidden data-i18n="ct_err">Не получилось отправить. Напишите нам напрямую: peoplecounterpro@proton.me</p>
+    </form>
+    <div class="contact-side">
+      <div class="term reveal from-r d1" id="term">
+        <div class="win-bar">
+          <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+          <span class="win-title">support — session</span>
+        </div>
+        <div class="term-body" id="termBody"
+          data-l1="&gt; pcp --support"
+          data-l2="[OK] channel open: peoplecounterpro@proton.me"
+          data-l3="[OK] avg response time: &lt; 24h"
+          data-l4="[INFO] bug reports -&gt; priority queue"
+          data-l5="[INFO] custom features -&gt; quote on request"
+          data-l6="&gt; awaiting your message"></div>
+      </div>
+      <div class="side-card reveal d2">
+        <div class="card-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M3.5 6.5L12 13l8.5-6.5"/></svg></div>
+        <h3 data-i18n="ct_d_t">Почта</h3>
+        <p data-i18n="ct_d_d">Для покупки, доработок и любых вопросов:</p>
+        <a class="side-mail" href="mailto:peoplecounterpro@proton.me">peoplecounterpro@proton.me</a>
+      </div>
+      <div class="side-card reveal d3">
+        <div class="card-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="8" height="10" rx="4"/><path d="M9.5 5.5a2.5 2.5 0 015 0"/><path d="M8 11H3.5M8 14.5H4M16 11h4.5M16 14.5h4M9.5 8L7 5.5M14.5 8L17 5.5"/></svg></div>
+        <h3 data-i18n="ct_b_t">Нашли ошибку?</h3>
+        <p data-i18n="ct_b_d">Напишите нам — мы читаем всё. Опишите, что делали перед сбоем, и укажите версию программы: так мы починим гораздо быстрее.</p>
+      </div>
+      <div class="side-card reveal d3">
+        <div class="card-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 21h5M10.5 18h3"/><path d="M12 3a6 6 0 00-3.5 10.9c.8.6 1.1 1.2 1.2 2.1h4.6c.1-.9.4-1.5 1.2-2.1A6 6 0 0012 3z"/></svg></div>
+        <h3 data-i18n="ct_i_t">Идеи и пожелания</h3>
+        <p data-i18n="ct_i_d">Чего-то не хватает? Расскажите, как вы пользуетесь программой — самые частые просьбы попадают в планы.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<div class="giant" aria-hidden="true">
+  <div class="giant-track">
+    <span>PEOPLE COUNTER PRO&nbsp;·&nbsp;ON-DEVICE AI VISION&nbsp;·&nbsp;</span>
+    <span>PEOPLE COUNTER PRO&nbsp;·&nbsp;ON-DEVICE AI VISION&nbsp;·&nbsp;</span>
+  </div>
+</div>
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="index.html">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2l8.66 5v10L12 22 3.34 17V7L12 2z" stroke="#8b5cf6" stroke-width="1.6"/><circle cx="12" cy="12" r="3.2" fill="#8b5cf6"/></svg>
+        <span>People&nbsp;Counter&nbsp;<b>PRO</b></span>
+      </a>
+      <p data-i18n="ft_desc">Программа, которая считает людей по видео с камер. Считает посетителей, строит тепловые карты, ведёт отчёты — и всё это прямо на вашем компьютере, без облака.</p>
+      <div class="footer-meta">
+        <span class="meta-row"><span data-i18n="ft_time_l">Местное время</span><b id="clock">--:--:--</b></span>
+        <span class="meta-row"><span>PCP CORE</span><b>v4.0 — LIVE<i class="meta-dot"></i></b></span>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4><span class="idx">01</span><span data-i18n="ft_nav">Разделы</span></h4>
+      <a href="index.html" data-i18n="nav_home">Главная</a>
+      <a href="about.html" data-i18n="nav_about">О программе</a>
+      <a href="pricing.html" data-i18n="nav_pricing">Цены</a>
+      <a href="roadmap.html" data-i18n="nav_roadmap">Обновления</a>
+      <a href="contact.html" data-i18n="nav_contact">Контакты</a>
+    </div>
+    <div class="footer-col">
+      <h4><span class="idx">02</span><span data-i18n="ft_contact_t">Связь</span></h4>
+      <span data-i18n="ft_mail_l">Почта для вопросов и заказов:</span>
+      <a class="footer-mail" href="mailto:peoplecounterpro@proton.me">peoplecounterpro@proton.me</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© <span id="year">2026</span> People Counter PRO. <span data-i18n="ft_rights">Все права защищены.</span></span>
+    <span class="footer-sig">VISION&nbsp;/&nbsp;COUNT&nbsp;/&nbsp;REPORT</span>
+  </div>
+</footer>
+<script src="static/js/i18n.js"></script>
+<script src="static/js/main.js"></script>
+</body>
+</html>

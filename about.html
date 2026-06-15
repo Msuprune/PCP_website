@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="t_about">О программе — People Counter PRO</title>
+<meta name="description" content="People Counter PRO — система видеоаналитики на базе компьютерного зрения: подсчёт людей, тепловые карты, отчёты, приватность.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="static/css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l8.66 5v10L12 22 3.34 17V7L12 2z' fill='%237c3aed'/%3E%3Ccircle cx='12' cy='12' r='3.4' fill='%23c084fc'/%3E%3C/svg%3E">
+<script>try{if(!sessionStorage.getItem("pcp_boot"))document.documentElement.classList.add("booting")}catch(e){}</script>
+</head>
+<body>
+<div class="boot" id="boot" aria-hidden="true">
+  <div class="boot-inner">
+    <span class="boot-logo">PCP<i></i></span>
+    <span class="boot-line" id="bootLine">INIT VISION CORE</span>
+    <div class="boot-bar"><i id="bootBar"></i></div>
+  </div>
+</div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<div class="cursor-aim" id="cursorAim" aria-hidden="true">
+  <span class="aim-tl"></span><span class="aim-tr"></span>
+  <span class="aim-bl"></span><span class="aim-br"></span>
+</div>
+<div class="grain" aria-hidden="true"></div>
+<div class="bg-glow" aria-hidden="true">
+  <div class="aurora a1"></div>
+  <div class="aurora a2"></div>
+</div>
+<header class="nav" id="nav">
+  <a class="logo" href="index.html">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><defs><linearGradient id="lgm" x1="0" y1="0" x2="24" y2="24"><stop stop-color="#8b5cf6"/><stop offset="1" stop-color="#d8b4fe"/></linearGradient></defs><path d="M12 2l8.66 5v10L12 22 3.34 17V7L12 2z" stroke="url(#lgm)" stroke-width="1.6"/><circle cx="12" cy="12" r="3.2" fill="url(#lgm)"/></svg>
+    <span>People&nbsp;Counter&nbsp;<b>PRO</b></span>
+  </a>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html" data-i18n="nav_home">Главная</a>
+    <a href="about.html" class="active" data-i18n="nav_about">О программе</a>
+    <a href="pricing.html" data-i18n="nav_pricing">Цены</a>
+    <a href="roadmap.html" data-i18n="nav_roadmap">Обновления</a>
+    <a href="contact.html" data-i18n="nav_contact">Контакты</a>
+    <div class="lang-switch lang-switch-mobile" role="group" aria-label="Language">
+      <button type="button" data-lang="ru">RU</button>
+      <button type="button" data-lang="en">EN</button>
+      <button type="button" data-lang="kk">KZ</button>
+    </div>
+    <a href="contact.html" class="btn btn-primary btn-sm nav-cta-m" data-i18n="nav_cta">Связаться</a>
+  </nav>
+  <div class="nav-right">
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button type="button" data-lang="ru">RU</button>
+      <button type="button" data-lang="en">EN</button>
+      <button type="button" data-lang="kk">KZ</button>
+    </div>
+    <a href="contact.html" class="btn btn-primary btn-sm nav-cta" data-i18n="nav_cta">Связаться</a>
+    <button class="burger" id="burger" aria-label="Меню" type="button"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main>
+<section class="page-hero">
+  <div class="container">
+    <span class="kicker reveal" data-i18n="ab_k">О программе</span>
+    <h1 class="reveal d1 rise" data-i18n="ab_t">Видеоаналитика, которая остаётся у вас</h1>
+    <p class="lead reveal d2" data-i18n="ab_lead">People Counter PRO начался с простой мысли: чтобы считать посетителей, не нужно платить за дорогие облачные подписки и отдавать своё видео на чужие серверы. Программа работает прямо на вашем компьютере — и всё остаётся у вас.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split">
+    <div class="split-text reveal from-l">
+      <span class="kicker" data-num="01" data-i18n="ab_m_k">Зачем мы это делаем</span>
+      <h2 class="rise-io" data-i18n="ab_m_t">Сложное внутри, простое снаружи</h2>
+      <p data-i18n="ab_m_d1">Внутри — серьёзные технологии компьютерного зрения, но пользоваться программой просто: подключили камеру, отметили линии — и она уже считает. Без программистов, интеграторов и месяцев внедрения.</p>
+      <p data-i18n="ab_m_d2">Мы дорабатываем программу по отзывам тех, кто ей пользуется. Каждое сообщение об ошибке и каждая идея реально влияют на то, что появится дальше.</p>
+    </div>
+    <div class="split-visual reveal from-r d1">
+      <div class="glass-panel">
+        <div class="gp-head">SYSTEM STATUS</div>
+        <div class="gp-row"><span class="gp-dot g"></span><span data-i18n="ab_g1">Распознавание включено</span><b>YOLOv8</b></div>
+        <div class="gp-row"><span class="gp-dot v"></span><span data-i18n="ab_g2">Видеокарта задействована</span><b>CUDA FP16</b></div>
+        <div class="gp-row"><span class="gp-dot y"></span><span data-i18n="ab_g3">Лица размыты</span><b>ON</b></div>
+        <div class="gp-row"><span class="gp-dot b"></span><span data-i18n="ab_g4">Выгрузка в облако</span><b>DRIVE</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="kicker" data-num="02" data-i18n="ab_tech_k">Под капотом</span>
+      <h2 class="rise-io" data-i18n="ab_tech_t">На чём всё построено</h2>
+    </div>
+    <div class="grid-4">
+      <div class="card reveal"><div class="card-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="1"/><rect x="10.5" y="10.5" width="3" height="3"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></svg></div><h3 data-i18n="ab_t1t">YOLOv8 + PyTorch</h3><p data-i18n="ab_t1d">Нейросеть, которая находит и ведёт людей в кадре. Та же технология, что стоит в серьёзных системах распознавания.</p></div>
+      <div class="card reveal d1"><div class="card-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12s3.5-6.5 9.5-6.5S21.5 12 21.5 12s-3.5 6.5-9.5 6.5S2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.6"/></svg></div><h3 data-i18n="ab_t2t">OpenCV</h3><p data-i18n="ab_t2d">Отвечает за работу с видео: принимает поток с камеры, рисует зоны и линии, записывает результат.</p></div>
+      <div class="card reveal d2"><div class="card-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 19a9 9 0 1115 0"/><path d="M12 13.5L16.5 9"/><circle cx="12" cy="13.5" r="1.4"/></svg></div><h3 data-i18n="ab_t3t">CUDA / FP16</h3><p data-i18n="ab_t3d">Если у вас видеокарта NVIDIA, программа считает на ней — до 60 кадров в секунду на каждую камеру.</p></div>
+      <div class="card reveal d3"><div class="card-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5.5" y="11" width="13" height="9" rx="1.5"/><path d="M8.5 11V7.5a3.5 3.5 0 017 0V11"/><path d="M12 14.5v2"/></svg></div><h3 data-i18n="ab_t4t">Пароли под шифром</h3><p data-i18n="ab_t4d">Пароли и ключи к Google Drive и почте хранятся в зашифрованном виде. А видео и вовсе не покидает ваш компьютер.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="kicker" data-num="03" data-i18n="ab_u_k">Где пригодится</span>
+      <h2 class="rise-io" data-i18n="ab_u_t">Кому подходит People Counter PRO</h2>
+    </div>
+    <div class="grid-4">
+      <div class="card reveal"><div class="card-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 8.5h15L18.3 20.5H5.7z"/><path d="M8.5 11V6.5a3.5 3.5 0 017 0V11"/></svg></div><h3 data-i18n="ab_u1t">Магазины</h3><p data-i18n="ab_u1d">Сколько человек зашло, в какие часы наплыв, какие витрины работают, а какие зоны пустуют — всё видно по тепловым картам.</p></div>
+      <div class="card reveal d1"><div class="card-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20.5h18"/><rect x="5.5" y="3.5" width="13" height="17"/><path d="M9 7.5h2M13 7.5h2M9 11.5h2M13 11.5h2M9 15.5h2M13 15.5h2"/><path d="M11 20.5v-2.5h2v2.5"/></svg></div><h3 data-i18n="ab_u2t">Офисы и бизнес-центры</h3><p data-i18n="ab_u2d">Загрузка переговорок и общих зон, проходимость на входе, статистика по дням.</p></div>
+      <div class="card reveal d2"><div class="card-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 21V3.5"/><path d="M5.5 4.5c4.5-2 7.5 2 13 0v9.5c-5.5 2-8.5-2-13 0"/></svg></div><h3 data-i18n="ab_u3t">Мероприятия</h3><p data-i18n="ab_u3d">Сколько народу на площадке, как люди перетекают между зонами и сигнал, когда пора придержать вход.</p></div>
+      <div class="card reveal d3"><div class="card-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5.5" y="3.5" width="13" height="13" rx="2.5"/><path d="M5.5 11.5h13"/><path d="M9 16.5l-2 4M15 16.5l2 4"/><path d="M9.5 13.8v.4M14.5 13.8v.4"/></svg></div><h3 data-i18n="ab_u4t">Транспорт</h3><p data-i18n="ab_u4d">Сколько пассажиров на станции или остановке. Отдельные линии для входа и выхода считают потоки по отдельности.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container privacy-band" data-scrub>
+    <div class="privacy-text">
+      <span class="kicker" data-num="04" data-i18n="ab_p_k">Приватность</span>
+      <h2 class="rise-io" data-i18n="ab_p_t">Ваше видео не уходит в облако</h2>
+      <p data-i18n="ab_p_d">Облачные сервисы гоняют ваше видео на свои серверы. People Counter PRO так не делает — всё считается у вас. Это быстрее, дешевле и спокойнее.</p>
+      <ul class="check-list">
+        <li data-i18n="ab_p_l1">Лица размываются и в кадре, и в записи</li>
+        <li data-i18n="ab_p_l2">Видео обрабатывается и хранится только у вас</li>
+        <li data-i18n="ab_p_l3">В облако что-то уходит, только если вы сами это включите</li>
+      </ul>
+    </div>
+    <div class="privacy-visual">
+      <div class="shield">
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5l8 3v6c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10v-6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<section class="support-band">
+  <div class="container support-inner" data-scrub>
+    <div class="support-icon">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M5.7 5.7l3.8 3.8M18.3 5.7l-3.8 3.8M5.7 18.3l3.8-3.8M18.3 18.3l-3.8-3.8"/></svg>
+    </div>
+    <div class="support-text">
+      <h3 data-i18n="sup_t">Что-то работает не так?</h3>
+      <p data-i18n="sup_d">Напишите нам — мы читаем каждое сообщение и стараемся всё починить в ближайшем обновлении. Чем подробнее опишете, что случилось, тем быстрее разберёмся.</p>
+    </div>
+    <a href="contact.html?topic=bug" class="btn btn-ghost" data-i18n="sup_b">Сообщить о проблеме</a>
+  </div>
+</section>
+<div class="giant" aria-hidden="true">
+  <div class="giant-track">
+    <span>PEOPLE COUNTER PRO&nbsp;·&nbsp;ON-DEVICE AI VISION&nbsp;·&nbsp;</span>
+    <span>PEOPLE COUNTER PRO&nbsp;·&nbsp;ON-DEVICE AI VISION&nbsp;·&nbsp;</span>
+  </div>
+</div>
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="index.html">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2l8.66 5v10L12 22 3.34 17V7L12 2z" stroke="#8b5cf6" stroke-width="1.6"/><circle cx="12" cy="12" r="3.2" fill="#8b5cf6"/></svg>
+        <span>People&nbsp;Counter&nbsp;<b>PRO</b></span>
+      </a>
+      <p data-i18n="ft_desc">Программа, которая считает людей по видео с камер. Считает посетителей, строит тепловые карты, ведёт отчёты — и всё это прямо на вашем компьютере, без облака.</p>
+      <div class="footer-meta">
+        <span class="meta-row"><span data-i18n="ft_time_l">Местное время</span><b id="clock">--:--:--</b></span>
+        <span class="meta-row"><span>PCP CORE</span><b>v4.0 — LIVE<i class="meta-dot"></i></b></span>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4><span class="idx">01</span><span data-i18n="ft_nav">Разделы</span></h4>
+      <a href="index.html" data-i18n="nav_home">Главная</a>
+      <a href="about.html" data-i18n="nav_about">О программе</a>
+      <a href="pricing.html" data-i18n="nav_pricing">Цены</a>
+      <a href="roadmap.html" data-i18n="nav_roadmap">Обновления</a>
+      <a href="contact.html" data-i18n="nav_contact">Контакты</a>
+    </div>
+    <div class="footer-col">
+      <h4><span class="idx">02</span><span data-i18n="ft_contact_t">Связь</span></h4>
+      <span data-i18n="ft_mail_l">Почта для вопросов и заказов:</span>
+      <a class="footer-mail" href="mailto:peoplecounterpro@proton.me">peoplecounterpro@proton.me</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© <span id="year">2026</span> People Counter PRO. <span data-i18n="ft_rights">Все права защищены.</span></span>
+    <span class="footer-sig">VISION&nbsp;/&nbsp;COUNT&nbsp;/&nbsp;REPORT</span>
+  </div>
+</footer>
+<script src="static/js/i18n.js"></script>
+<script src="static/js/main.js"></script>
+</body>
+</html>

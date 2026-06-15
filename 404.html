@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="t_404">Страница не найдена — People Counter PRO</title>
+<meta name="description" content="People Counter PRO — система видеоаналитики на базе компьютерного зрения: подсчёт людей, тепловые карты, отчёты, приватность.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="static/css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l8.66 5v10L12 22 3.34 17V7L12 2z' fill='%237c3aed'/%3E%3Ccircle cx='12' cy='12' r='3.4' fill='%23c084fc'/%3E%3C/svg%3E">
+<script>try{if(!sessionStorage.getItem("pcp_boot"))document.documentElement.classList.add("booting")}catch(e){}</script>
+</head>
+<body>
+<div class="boot" id="boot" aria-hidden="true">
+  <div class="boot-inner">
+    <span class="boot-logo">PCP<i></i></span>
+    <span class="boot-line" id="bootLine">INIT VISION CORE</span>
+    <div class="boot-bar"><i id="bootBar"></i></div>
+  </div>
+</div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<div class="cursor-aim" id="cursorAim" aria-hidden="true">
+  <span class="aim-tl"></span><span class="aim-tr"></span>
+  <span class="aim-bl"></span><span class="aim-br"></span>
+</div>
+<div class="grain" aria-hidden="true"></div>
+<div class="bg-glow" aria-hidden="true">
+  <div class="aurora a1"></div>
+  <div class="aurora a2"></div>
+</div>
+<header class="nav" id="nav">
+  <a class="logo" href="index.html">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><defs><linearGradient id="lgm" x1="0" y1="0" x2="24" y2="24"><stop stop-color="#8b5cf6"/><stop offset="1" stop-color="#d8b4fe"/></linearGradient></defs><path d="M12 2l8.66 5v10L12 22 3.34 17V7L12 2z" stroke="url(#lgm)" stroke-width="1.6"/><circle cx="12" cy="12" r="3.2" fill="url(#lgm)"/></svg>
+    <span>People&nbsp;Counter&nbsp;<b>PRO</b></span>
+  </a>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html" data-i18n="nav_home">Главная</a>
+    <a href="about.html" data-i18n="nav_about">О программе</a>
+    <a href="pricing.html" data-i18n="nav_pricing">Цены</a>
+    <a href="roadmap.html" data-i18n="nav_roadmap">Обновления</a>
+    <a href="contact.html" data-i18n="nav_contact">Контакты</a>
+    <div class="lang-switch lang-switch-mobile" role="group" aria-label="Language">
+      <button type="button" data-lang="ru">RU</button>
+      <button type="button" data-lang="en">EN</button>
+      <button type="button" data-lang="kk">KZ</button>
+    </div>
+    <a href="contact.html" class="btn btn-primary btn-sm nav-cta-m" data-i18n="nav_cta">Связаться</a>
+  </nav>
+  <div class="nav-right">
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button type="button" data-lang="ru">RU</button>
+      <button type="button" data-lang="en">EN</button>
+      <button type="button" data-lang="kk">KZ</button>
+    </div>
+    <a href="contact.html" class="btn btn-primary btn-sm nav-cta" data-i18n="nav_cta">Связаться</a>
+    <button class="burger" id="burger" aria-label="Меню" type="button"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main>
+<section class="page-hero nf">
+  <div class="container">
+    <div class="nf-code">404</div>
+    <h1 data-i18n="nf_t">Такой страницы нет</h1>
+    <p data-i18n="nf_d">Кажется, эта страница потерялась. Вернёмся на главную?</p>
+    <a href="index.html" class="btn btn-primary" data-i18n="nf_b">На главную</a>
+  </div>
+</section>
+</main>
+<div class="giant" aria-hidden="true">
+  <div class="giant-track">
+    <span>PEOPLE COUNTER PRO&nbsp;·&nbsp;ON-DEVICE AI VISION&nbsp;·&nbsp;</span>
+    <span>PEOPLE COUNTER PRO&nbsp;·&nbsp;ON-DEVICE AI VISION&nbsp;·&nbsp;</span>
+  </div>
+</div>
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="index.html">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2l8.66 5v10L12 22 3.34 17V7L12 2z" stroke="#8b5cf6" stroke-width="1.6"/><circle cx="12" cy="12" r="3.2" fill="#8b5cf6"/></svg>
+        <span>People&nbsp;Counter&nbsp;<b>PRO</b></span>
+      </a>
+      <p data-i18n="ft_desc">Программа, которая считает людей по видео с камер. Считает посетителей, строит тепловые карты, ведёт отчёты — и всё это прямо на вашем компьютере, без облака.</p>
+      <div class="footer-meta">
+        <span class="meta-row"><span data-i18n="ft_time_l">Местное время</span><b id="clock">--:--:--</b></span>
+        <span class="meta-row"><span>PCP CORE</span><b>v4.0 — LIVE<i class="meta-dot"></i></b></span>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4><span class="idx">01</span><span data-i18n="ft_nav">Разделы</span></h4>
+      <a href="index.html" data-i18n="nav_home">Главная</a>
+      <a href="about.html" data-i18n="nav_about">О программе</a>
+      <a href="pricing.html" data-i18n="nav_pricing">Цены</a>
+      <a href="roadmap.html" data-i18n="nav_roadmap">Обновления</a>
+      <a href="contact.html" data-i18n="nav_contact">Контакты</a>
+    </div>
+    <div class="footer-col">
+      <h4><span class="idx">02</span><span data-i18n="ft_contact_t">Связь</span></h4>
+      <span data-i18n="ft_mail_l">Почта для вопросов и заказов:</span>
+      <a class="footer-mail" href="mailto:peoplecounterpro@proton.me">peoplecounterpro@proton.me</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© <span id="year">2026</span> People Counter PRO. <span data-i18n="ft_rights">Все права защищены.</span></span>
+    <span class="footer-sig">VISION&nbsp;/&nbsp;COUNT&nbsp;/&nbsp;REPORT</span>
+  </div>
+</footer>
+<script src="static/js/i18n.js"></script>
+<script src="static/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="t_roadmap">Что нового и что впереди — People Counter PRO</title>
+<meta name="description" content="People Counter PRO — система видеоаналитики на базе компьютерного зрения: подсчёт людей, тепловые карты, отчёты, приватность.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="static/css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l8.66 5v10L12 22 3.34 17V7L12 2z' fill='%237c3aed'/%3E%3Ccircle cx='12' cy='12' r='3.4' fill='%23c084fc'/%3E%3C/svg%3E">
+<script>try{if(!sessionStorage.getItem("pcp_boot"))document.documentElement.classList.add("booting")}catch(e){}</script>
+</head>
+<body>
+<div class="boot" id="boot" aria-hidden="true">
+  <div class="boot-inner">
+    <span class="boot-logo">PCP<i></i></span>
+    <span class="boot-line" id="bootLine">INIT VISION CORE</span>
+    <div class="boot-bar"><i id="bootBar"></i></div>
+  </div>
+</div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<div class="cursor-aim" id="cursorAim" aria-hidden="true">
+  <span class="aim-tl"></span><span class="aim-tr"></span>
+  <span class="aim-bl"></span><span class="aim-br"></span>
+</div>
+<div class="grain" aria-hidden="true"></div>
+<div class="bg-glow" aria-hidden="true">
+  <div class="aurora a1"></div>
+  <div class="aurora a2"></div>
+</div>
+<header class="nav" id="nav">
+  <a class="logo" href="index.html">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><defs><linearGradient id="lgm" x1="0" y1="0" x2="24" y2="24"><stop stop-color="#8b5cf6"/><stop offset="1" stop-color="#d8b4fe"/></linearGradient></defs><path d="M12 2l8.66 5v10L12 22 3.34 17V7L12 2z" stroke="url(#lgm)" stroke-width="1.6"/><circle cx="12" cy="12" r="3.2" fill="url(#lgm)"/></svg>
+    <span>People&nbsp;Counter&nbsp;<b>PRO</b></span>
+  </a>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html" data-i18n="nav_home">Главная</a>
+    <a href="about.html" data-i18n="nav_about">О программе</a>
+    <a href="pricing.html" data-i18n="nav_pricing">Цены</a>
+    <a href="roadmap.html" class="active" data-i18n="nav_roadmap">Обновления</a>
+    <a href="contact.html" data-i18n="nav_contact">Контакты</a>
+    <div class="lang-switch lang-switch-mobile" role="group" aria-label="Language">
+      <button type="button" data-lang="ru">RU</button>
+      <button type="button" data-lang="en">EN</button>
+      <button type="button" data-lang="kk">KZ</button>
+    </div>
+    <a href="contact.html" class="btn btn-primary btn-sm nav-cta-m" data-i18n="nav_cta">Связаться</a>
+  </nav>
+  <div class="nav-right">
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button type="button" data-lang="ru">RU</button>
+      <button type="button" data-lang="en">EN</button>
+      <button type="button" data-lang="kk">KZ</button>
+    </div>
+    <a href="contact.html" class="btn btn-primary btn-sm nav-cta" data-i18n="nav_cta">Связаться</a>
+    <button class="burger" id="burger" aria-label="Меню" type="button"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main>
+<section class="page-hero">
+  <div class="container">
+    <span class="kicker reveal" data-i18n="rm_k">Планы</span>
+    <h1 class="reveal d1 rise" data-i18n="rm_t">Что впереди</h1>
+    <p class="lead reveal d2" data-i18n="rm_s">Мы развиваем People Counter PRO открыто. Ниже — над чем работаем сейчас и что программа уже умеет.</p>
+  </div>
+</section>
+
+<section class="section rm-board">
+  <div class="container">
+
+    <div class="rm-phase reveal">
+      <span class="rm-phase-tag dev"><span class="rm-phase-dot"></span>ACTIVE DEVELOPMENT</span>
+      <div class="rm-phase-sep"></div>
+      <span class="rm-phase-ct">2 items</span>
+    </div>
+
+    <div class="rm-grid">
+      <div class="rm-card active reveal">
+        <div class="rm-card-header">
+          <span class="tag dev" data-i18n="rm_st_dev">В работе</span>
+          <span class="rm-num">01</span>
+        </div>
+        <h3 data-i18n="rm_i1t">Мультикамерный режим</h3>
+        <p data-i18n="rm_i1d">Несколько камер в одной программе и общая статистика по всем: единые счётчики, сводные отчёты и одновременная запись.</p>
+        <div class="rm-progress-wrap">
+          <div class="rm-progress">
+            <div class="rm-fill" data-pct="65"></div>
+          </div>
+          <div class="rm-progress-meta">
+            <span class="rm-pct">65%</span>
+            <span class="rm-pct-label">PROGRESS</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="rm-card active reveal d1">
+        <div class="rm-card-header">
+          <span class="tag dev" data-i18n="rm_st_dev">В работе</span>
+          <span class="rm-num">04</span>
+        </div>
+        <h3 data-i18n="rm_i4t">Наблюдение через интернет</h3>
+        <p data-i18n="rm_i4d">Дашборд с графиками и живым видео, доступный откуда угодно — следите за своими точками с телефона или ноутбука, где бы вы ни были.</p>
+        <div class="rm-progress-wrap">
+          <div class="rm-progress">
+            <div class="rm-fill" data-pct="40"></div>
+          </div>
+          <div class="rm-progress-meta">
+            <span class="rm-pct">40%</span>
+            <span class="rm-pct-label">PROGRESS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rm-phase reveal">
+      <span class="rm-phase-tag plan">PLANNED</span>
+      <div class="rm-phase-sep"></div>
+      <span class="rm-phase-ct">2 items</span>
+    </div>
+
+    <div class="rm-grid">
+      <div class="rm-card planned reveal">
+        <div class="rm-card-header">
+          <span class="tag plan" data-i18n="rm_st_plan">В планах</span>
+          <span class="rm-num">02</span>
+        </div>
+        <h3 data-i18n="rm_i2t">Запоминание людей и распознавание по одежде</h3>
+        <p data-i18n="rm_i2d">Программа научится запоминать людей и различать их по виду. Можно будет завести свои группы — например, сотрудники, охрана, посетители — и считать каждую отдельно.</p>
+        <div class="rm-eta">
+          <span class="rm-eta-tag">Q3 2026</span>
+          <span class="rm-eta-label">estimated</span>
+        </div>
+      </div>
+
+      <div class="rm-card planned reveal d1">
+        <div class="rm-card-header">
+          <span class="tag plan" data-i18n="rm_st_plan">В планах</span>
+          <span class="rm-num">03</span>
+        </div>
+        <h3 data-i18n="rm_i3t">Ускорение и оптимизация</h3>
+        <p data-i18n="rm_i3d">Меньше нагрузка на процессор и видеокарту, быстрее запуск, умнее распределение ресурсов — больше камер на том же компьютере.</p>
+        <div class="rm-eta">
+          <span class="rm-eta-tag">Q4 2026</span>
+          <span class="rm-eta-label">estimated</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="kicker" data-num="01" data-i18n="rm_done_k">Сегодня</span>
+      <h2 class="rise-io" data-i18n="rm_done_t">Уже работает</h2>
+    </div>
+    <div class="done-grid stagger">
+      <span class="done-chip" data-i18n="rm_d1">Распознавание и ведение людей (YOLOv8)</span>
+      <span class="done-chip" data-i18n="rm_d2">Линии входа, выхода и однонаправленные</span>
+      <span class="done-chip" data-i18n="rm_d3">Зоны подсчёта любой формы</span>
+      <span class="done-chip" data-i18n="rm_d4">Тепловые карты с сохранением</span>
+      <span class="done-chip" data-i18n="rm_d5">Размытие лиц</span>
+      <span class="done-chip" data-i18n="rm_d6">Отчёты CSV и запись видео MP4</span>
+      <span class="done-chip" data-i18n="rm_d7">Google Drive и уведомления на почту</span>
+      <span class="done-chip" data-i18n="rm_d8">Дашборд в локальной сети</span>
+      <span class="done-chip" data-i18n="rm_d9">Ускорение видеокартой и турбо-режим</span>
+      <span class="done-chip" data-i18n="rm_d10">Интерфейс на 3 языках</span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container idea-band" data-scrub>
+    <h2 data-i18n="rm_note_t">Не хватает какой-то функции?</h2>
+    <p data-i18n="rm_note_d">Планы во многом складываются из ваших просьб. Расскажите, чего вам не хватает — вполне возможно, это появится в одном из ближайших обновлений.</p>
+    <a href="contact.html" class="btn btn-primary btn-magnetic" data-i18n="rm_note_b">Предложить идею</a>
+  </div>
+</section>
+</main>
+<section class="support-band">
+  <div class="container support-inner" data-scrub>
+    <div class="support-icon">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M5.7 5.7l3.8 3.8M18.3 5.7l-3.8 3.8M5.7 18.3l3.8-3.8M18.3 18.3l-3.8-3.8"/></svg>
+    </div>
+    <div class="support-text">
+      <h3 data-i18n="sup_t">Что-то работает не так?</h3>
+      <p data-i18n="sup_d">Напишите нам — мы читаем каждое сообщение и стараемся всё починить в ближайшем обновлении. Чем подробнее опишете, что случилось, тем быстрее разберёмся.</p>
+    </div>
+    <a href="contact.html?topic=bug" class="btn btn-ghost" data-i18n="sup_b">Сообщить о проблеме</a>
+  </div>
+</section>
+<div class="giant" aria-hidden="true">
+  <div class="giant-track">
+    <span>PEOPLE COUNTER PRO&nbsp;·&nbsp;ON-DEVICE AI VISION&nbsp;·&nbsp;</span>
+    <span>PEOPLE COUNTER PRO&nbsp;·&nbsp;ON-DEVICE AI VISION&nbsp;·&nbsp;</span>
+  </div>
+</div>
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="index.html">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2l8.66 5v10L12 22 3.34 17V7L12 2z" stroke="#8b5cf6" stroke-width="1.6"/><circle cx="12" cy="12" r="3.2" fill="#8b5cf6"/></svg>
+        <span>People&nbsp;Counter&nbsp;<b>PRO</b></span>
+      </a>
+      <p data-i18n="ft_desc">Программа, которая считает людей по видео с камер. Считает посетителей, строит тепловые карты, ведёт отчёты — и всё это прямо на вашем компьютере, без облака.</p>
+      <div class="footer-meta">
+        <span class="meta-row"><span data-i18n="ft_time_l">Местное время</span><b id="clock">--:--:--</b></span>
+        <span class="meta-row"><span>PCP CORE</span><b>v4.0 — LIVE<i class="meta-dot"></i></b></span>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4><span class="idx">01</span><span data-i18n="ft_nav">Разделы</span></h4>
+      <a href="index.html" data-i18n="nav_home">Главная</a>
+      <a href="about.html" data-i18n="nav_about">О программе</a>
+      <a href="pricing.html" data-i18n="nav_pricing">Цены</a>
+      <a href="roadmap.html" data-i18n="nav_roadmap">Обновления</a>
+      <a href="contact.html" data-i18n="nav_contact">Контакты</a>
+    </div>
+    <div class="footer-col">
+      <h4><span class="idx">02</span><span data-i18n="ft_contact_t">Связь</span></h4>
+      <span data-i18n="ft_mail_l">Почта для вопросов и заказов:</span>
+      <a class="footer-mail" href="mailto:peoplecounterpro@proton.me">peoplecounterpro@proton.me</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© <span id="year">2026</span> People Counter PRO. <span data-i18n="ft_rights">Все права защищены.</span></span>
+    <span class="footer-sig">VISION&nbsp;/&nbsp;COUNT&nbsp;/&nbsp;REPORT</span>
+  </div>
+</footer>
+<script src="static/js/i18n.js"></script>
+<script src="static/js/main.js"></script>
+</body>
+</html>

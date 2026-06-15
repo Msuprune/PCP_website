@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="t_pricing">Цены и лицензии — People Counter PRO</title>
+<meta name="description" content="People Counter PRO — система видеоаналитики на базе компьютерного зрения: подсчёт людей, тепловые карты, отчёты, приватность.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="static/css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l8.66 5v10L12 22 3.34 17V7L12 2z' fill='%237c3aed'/%3E%3Ccircle cx='12' cy='12' r='3.4' fill='%23c084fc'/%3E%3C/svg%3E">
+<script>try{if(!sessionStorage.getItem("pcp_boot"))document.documentElement.classList.add("booting")}catch(e){}</script>
+</head>
+<body>
+<div class="boot" id="boot" aria-hidden="true">
+  <div class="boot-inner">
+    <span class="boot-logo">PCP<i></i></span>
+    <span class="boot-line" id="bootLine">INIT VISION CORE</span>
+    <div class="boot-bar"><i id="bootBar"></i></div>
+  </div>
+</div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<div class="cursor-aim" id="cursorAim" aria-hidden="true">
+  <span class="aim-tl"></span><span class="aim-tr"></span>
+  <span class="aim-bl"></span><span class="aim-br"></span>
+</div>
+<div class="grain" aria-hidden="true"></div>
+<div class="bg-glow" aria-hidden="true">
+  <div class="aurora a1"></div>
+  <div class="aurora a2"></div>
+</div>
+<header class="nav" id="nav">
+  <a class="logo" href="index.html">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><defs><linearGradient id="lgm" x1="0" y1="0" x2="24" y2="24"><stop stop-color="#8b5cf6"/><stop offset="1" stop-color="#d8b4fe"/></linearGradient></defs><path d="M12 2l8.66 5v10L12 22 3.34 17V7L12 2z" stroke="url(#lgm)" stroke-width="1.6"/><circle cx="12" cy="12" r="3.2" fill="url(#lgm)"/></svg>
+    <span>People&nbsp;Counter&nbsp;<b>PRO</b></span>
+  </a>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html" data-i18n="nav_home">Главная</a>
+    <a href="about.html" data-i18n="nav_about">О программе</a>
+    <a href="pricing.html" class="active" data-i18n="nav_pricing">Цены</a>
+    <a href="roadmap.html" data-i18n="nav_roadmap">Обновления</a>
+    <a href="contact.html" data-i18n="nav_contact">Контакты</a>
+    <div class="lang-switch lang-switch-mobile" role="group" aria-label="Language">
+      <button type="button" data-lang="ru">RU</button>
+      <button type="button" data-lang="en">EN</button>
+      <button type="button" data-lang="kk">KZ</button>
+    </div>
+    <a href="contact.html" class="btn btn-primary btn-sm nav-cta-m" data-i18n="nav_cta">Связаться</a>
+  </nav>
+  <div class="nav-right">
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button type="button" data-lang="ru">RU</button>
+      <button type="button" data-lang="en">EN</button>
+      <button type="button" data-lang="kk">KZ</button>
+    </div>
+    <a href="contact.html" class="btn btn-primary btn-sm nav-cta" data-i18n="nav_cta">Связаться</a>
+    <button class="burger" id="burger" aria-label="Меню" type="button"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main>
+<section class="page-hero">
+  <div class="container">
+    <span class="kicker reveal" data-i18n="pr_k">Цены</span>
+    <h1 class="reveal d1 rise" data-i18n="pr_t">Платите один раз — без подписок</h1>
+    <p class="lead reveal d2" data-i18n="pr_s">Лицензия остаётся у вас навсегда. Выберите тариф под количество камер — или закажите свой вариант, если нужно что-то особенное.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="plans">
+      <div class="price-card reveal">
+        <h3>Start</h3>
+        <p class="plan-tag" data-i18n="pr_p1tag">Для одной камеры</p>
+        <div class="plan-price">$149<span data-i18n="pr_per">/ один раз, навсегда</span></div>
+        <ul class="check-list">
+          <li data-i18n="pr_p1f1">1 камера (USB, IP или видеофайл)</li>
+          <li data-i18n="pr_p1f2">Линии входа-выхода и зоны подсчёта</li>
+          <li data-i18n="pr_p1f3">Отчёты в CSV и запись видео</li>
+          <li data-i18n="pr_p1f4">Обновления полгода</li>
+          <li data-i18n="pr_p1f5">Поддержка по почте</li>
+        </ul>
+        <a class="btn btn-ghost btn-block" href="contact.html?topic=license&plan=Start" data-i18n="pr_buy">Запросить лицензию</a>
+      </div>
+      <div class="price-card featured reveal d1">
+        <span class="plan-badge" data-i18n="pr_pop">Чаще всего берут</span>
+        <h3>Pro</h3>
+        <p class="plan-tag" data-i18n="pr_p2tag">Для бизнеса с несколькими камерами</p>
+        <div class="plan-price">$399<span data-i18n="pr_per">/ один раз, навсегда</span></div>
+        <ul class="check-list">
+          <li data-i18n="pr_p2f1">До 4 камер одновременно</li>
+          <li data-i18n="pr_p2f2">Всё из тарифа Start</li>
+          <li data-i18n="pr_p2f3">Тепловые карты и размытие лиц</li>
+          <li data-i18n="pr_p2f4">Выгрузка в Google Drive и письма на почту</li>
+          <li data-i18n="pr_p2f5">Веб-дашборд в локальной сети</li>
+          <li data-i18n="pr_p2f6">Обновления год и поддержка вне очереди</li>
+        </ul>
+        <a class="btn btn-primary btn-block btn-magnetic" href="contact.html?topic=license&plan=Pro" data-i18n="pr_buy">Запросить лицензию</a>
+      </div>
+      <div class="price-card reveal d2">
+        <h3>Enterprise</h3>
+        <p class="plan-tag" data-i18n="pr_p3tag">Когда камер много или нужны особые условия</p>
+        <div class="plan-price"><span class="from" data-i18n="pr_from">от</span> $990<span data-i18n="pr_per3">/ по договорённости</span></div>
+        <ul class="check-list">
+          <li data-i18n="pr_p3f1">Сколько угодно камер</li>
+          <li data-i18n="pr_p3f2">Всё из тарифа Pro</li>
+          <li data-i18n="pr_p3f3">Распознавание по форме и виду (бета)</li>
+          <li data-i18n="pr_p3f4">Установим и обучим вашу команду</li>
+          <li data-i18n="pr_p3f5">Договор с гарантией ответа (SLA) и отдельная линия поддержки</li>
+        </ul>
+        <a class="btn btn-ghost btn-block" href="contact.html?topic=custom" data-i18n="pr_b3">Обсудить задачу</a>
+      </div>
+    </div>
+
+    <div class="pay-note reveal">
+      <span class="pay-note-tag">NOTICE</span>
+      <p data-i18n="pr_pay_note">Оплатить прямо на сайте пока нельзя — мы подключаем приём платежей. Сейчас всё просто: оставьте заявку, и в течение суток мы пришлём счёт и расскажем, что делать дальше.</p>
+    </div>
+
+    <div class="custom-dev" data-scrub>
+      <div class="custom-dev-text">
+        <h2 data-i18n="pr_c_t">Нужно что-то под вашу задачу?</h2>
+        <p data-i18n="pr_c_d">Дорабатываем программу под конкретные запросы: особый способ подсчёта, своя логика, связка с вашими сервисами. Напишите на <a href="mailto:peoplecounterpro@proton.me">peoplecounterpro@proton.me</a> — обсудим, что нужно и сколько это будет стоить.</p>
+      </div>
+      <a class="btn btn-light" href="mailto:peoplecounterpro@proton.me?subject=Custom%20development" data-i18n="pr_c_b">Заказать доработку</a>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container narrow">
+    <div class="sec-head reveal">
+      <span class="kicker" data-num="01">FAQ</span>
+      <h2 class="rise-io" data-i18n="pr_faq_t">Частые вопросы</h2>
+    </div>
+    <div class="faq">
+      <details class="reveal">
+        <summary data-i18n="pr_q1">С какими камерами работает?</summary>
+        <p data-i18n="pr_a1">С любыми: обычная USB-вебкамера, IP-камера (поток RTSP или HTTP) или готовый видеофайл. Покупать специальное оборудование не нужно.</p>
+      </details>
+      <details class="reveal d1">
+        <summary data-i18n="pr_q2">Нужен ли постоянный интернет?</summary>
+        <p data-i18n="pr_a2">Нет. Программа считает людей прямо на вашем компьютере, без интернета. Сеть нужна, только если вы захотите выгружать отчёты в Google Drive, получать письма на почту или открывать дашборд через интернет.</p>
+      </details>
+      <details class="reveal d2">
+        <summary data-i18n="pr_q3">Какой компьютер потянет?</summary>
+        <p data-i18n="pr_a3">Заработает и на обычном компьютере без видеокарты. Но если камер несколько и нужна высокая плавность, лучше видеокарта NVIDIA. Для слабых ПК есть облегчённый режим (модель Nano).</p>
+      </details>
+      <details class="reveal d3">
+        <summary data-i18n="pr_q4">Что входит в поддержку?</summary>
+        <p data-i18n="pr_a4">Поможем установить и настроить, починим ошибки, подскажем, как разметить зоны. Нашли проблему — пишите, мы только рады: так программа становится лучше.</p>
+      </details>
+    </div>
+  </div>
+</section>
+</main>
+<section class="support-band">
+  <div class="container support-inner" data-scrub>
+    <div class="support-icon">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M5.7 5.7l3.8 3.8M18.3 5.7l-3.8 3.8M5.7 18.3l3.8-3.8M18.3 18.3l-3.8-3.8"/></svg>
+    </div>
+    <div class="support-text">
+      <h3 data-i18n="sup_t">Что-то работает не так?</h3>
+      <p data-i18n="sup_d">Напишите нам — мы читаем каждое сообщение и стараемся всё починить в ближайшем обновлении. Чем подробнее опишете, что случилось, тем быстрее разберёмся.</p>
+    </div>
+    <a href="contact.html?topic=bug" class="btn btn-ghost" data-i18n="sup_b">Сообщить о проблеме</a>
+  </div>
+</section>
+<div class="giant" aria-hidden="true">
+  <div class="giant-track">
+    <span>PEOPLE COUNTER PRO&nbsp;·&nbsp;ON-DEVICE AI VISION&nbsp;·&nbsp;</span>
+    <span>PEOPLE COUNTER PRO&nbsp;·&nbsp;ON-DEVICE AI VISION&nbsp;·&nbsp;</span>
+  </div>
+</div>
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="index.html">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2l8.66 5v10L12 22 3.34 17V7L12 2z" stroke="#8b5cf6" stroke-width="1.6"/><circle cx="12" cy="12" r="3.2" fill="#8b5cf6"/></svg>
+        <span>People&nbsp;Counter&nbsp;<b>PRO</b></span>
+      </a>
+      <p data-i18n="ft_desc">Программа, которая считает людей по видео с камер. Считает посетителей, строит тепловые карты, ведёт отчёты — и всё это прямо на вашем компьютере, без облака.</p>
+      <div class="footer-meta">
+        <span class="meta-row"><span data-i18n="ft_time_l">Местное время</span><b id="clock">--:--:--</b></span>
+        <span class="meta-row"><span>PCP CORE</span><b>v4.0 — LIVE<i class="meta-dot"></i></b></span>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4><span class="idx">01</span><span data-i18n="ft_nav">Разделы</span></h4>
+      <a href="index.html" data-i18n="nav_home">Главная</a>
+      <a href="about.html" data-i18n="nav_about">О программе</a>
+      <a href="pricing.html" data-i18n="nav_pricing">Цены</a>
+      <a href="roadmap.html" data-i18n="nav_roadmap">Обновления</a>
+      <a href="contact.html" data-i18n="nav_contact">Контакты</a>
+    </div>
+    <div class="footer-col">
+      <h4><span class="idx">02</span><span data-i18n="ft_contact_t">Связь</span></h4>
+      <span data-i18n="ft_mail_l">Почта для вопросов и заказов:</span>
+      <a class="footer-mail" href="mailto:peoplecounterpro@proton.me">peoplecounterpro@proton.me</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© <span id="year">2026</span> People Counter PRO. <span data-i18n="ft_rights">Все права защищены.</span></span>
+    <span class="footer-sig">VISION&nbsp;/&nbsp;COUNT&nbsp;/&nbsp;REPORT</span>
+  </div>
+</footer>
+<script src="static/js/i18n.js"></script>
+<script src="static/js/main.js"></script>
+</body>
+</html>
